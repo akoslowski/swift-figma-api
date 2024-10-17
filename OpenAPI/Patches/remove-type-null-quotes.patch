@@ -1,0 +1,262 @@
+diff --git a/OpenAPI/openapi.yaml b/OpenAPI/openapi.yaml
+index 8265feb..a586c5c 100644
+--- a/OpenAPI/openapi.yaml
++++ b/OpenAPI/openapi.yaml
+@@ -2454,7 +2454,7 @@ components:
+           description: Bounding box of the node in absolute space coordinates.
+           oneOf:
+             - $ref: "#/components/schemas/Rectangle"
+-            - type: "null"
++            - type: null
+         absoluteRenderBounds:
+           description: The actual bounds of a node accounting for drop shadows, thick
+             strokes, and anything else that may fall outside the node's regular
+@@ -2463,7 +2463,7 @@ components:
+             on the page. This value will be `null` if the node is invisible.
+           oneOf:
+             - $ref: "#/components/schemas/Rectangle"
+-            - type: "null"
++            - type: null
+         preserveRatio:
+           type: boolean
+           description: Keep height and width constrained to same ratio.
+@@ -2746,7 +2746,7 @@ components:
+               additionalProperties:
+                 oneOf:
+                   - $ref: "#/components/schemas/PaintOverride"
+-                  - type: "null"
++                  - type: null
+               description: Map from ID to PaintOverride for looking up fill overrides. To see
+                 which regions are overriden, you must use the `geometry=paths`
+                 option. Each path returned may have an `overrideID` which maps
+@@ -3154,7 +3154,7 @@ components:
+             prototypeStartNodeID:
+               type:
+                 - string
+-                - "null"
++                - null
+               description: Node ID that corresponds to the start frame for prototypes. This is
+                 deprecated with the introduction of multiple flows. Please use
+                 the `flowStartingPoints` field.
+@@ -4512,7 +4512,7 @@ components:
+         fontPostScriptName:
+           type:
+             - string
+-            - "null"
++            - null
+           description: PostScript font name.
+         paragraphSpacing:
+           type: number
+@@ -4929,7 +4929,7 @@ components:
+         trigger:
+           oneOf:
+             - $ref: "#/components/schemas/Trigger"
+-            - type: "null"
++            - type: null
+           description: The user event that initiates the interaction.
+         actions:
+           type: array
+@@ -5090,7 +5090,7 @@ components:
+             destinationId:
+               type:
+                 - string
+-                - "null"
++                - null
+             mediaAction:
+               type: string
+               enum:
+@@ -5122,7 +5122,7 @@ components:
+             destinationId:
+               type:
+                 - string
+-                - "null"
++                - null
+             mediaAction:
+               type: string
+               enum:
+@@ -5152,7 +5152,7 @@ components:
+             destinationId:
+               type:
+                 - string
+-                - "null"
++                - null
+             mediaAction:
+               type: string
+               enum:
+@@ -5174,13 +5174,13 @@ components:
+         destinationId:
+           type:
+             - string
+-            - "null"
++            - null
+         navigation:
+           $ref: "#/components/schemas/Navigation"
+         transition:
+           oneOf:
+             - $ref: "#/components/schemas/Transition"
+-            - type: "null"
++            - type: null
+         preserveScrollPosition:
+           type: boolean
+           description: Whether the scroll offsets of any scrollable elements in the
+@@ -5345,7 +5345,7 @@ components:
+         variableId:
+           type:
+             - string
+-            - "null"
++            - null
+         variableValue:
+           $ref: "#/components/schemas/VariableData"
+       required:
+@@ -5362,11 +5362,11 @@ components:
+         variableCollectionId:
+           type:
+             - string
+-            - "null"
++            - null
+         variableModeId:
+           type:
+             - string
+-            - "null"
++            - null
+       required:
+         - type
+         - variableId
+@@ -5581,7 +5581,7 @@ components:
+         resolved_at:
+           type:
+             - string
+-            - "null"
++            - null
+           format: date-time
+           description: If set, the UTC ISO 8601 time the comment was resolved
+         message:
+@@ -5590,7 +5590,7 @@ components:
+         order_id:
+           type:
+             - string
+-            - "null"
++            - null
+           description: Only set for top level comments. The number displayed with the
+             comment in the UI
+         reactions:
+@@ -5848,12 +5848,12 @@ components:
+         label:
+           type:
+             - string
+-            - "null"
++            - null
+           description: The label given to the version in the editor
+         description:
+           type:
+             - string
+-            - "null"
++            - null
+           description: The description of the version as entered in the editor
+         user:
+           $ref: "#/components/schemas/User"
+@@ -5886,7 +5886,7 @@ components:
+         client_id:
+           type:
+             - string
+-            - "null"
++            - null
+           description: The client ID of the OAuth application that registered this
+             webhook, if any
+         passcode:
+@@ -5898,7 +5898,7 @@ components:
+         description:
+           type:
+             - string
+-            - "null"
++            - null
+           description: Optional user-provided description or name for the webhook. This is
+             provided to help make maintaining a number of webhooks more
+             convenient. Max length 140 characters.
+@@ -5945,7 +5945,7 @@ components:
+         error_msg:
+           type:
+             - string
+-            - "null"
++            - null
+           description: Error message for this request. NULL if no error occurred
+       required:
+         - webhook_id
+@@ -5977,7 +5977,7 @@ components:
+     WebhookV2ResponseInfo:
+       type:
+         - object
+-        - "null"
++        - null
+       description: Information regarding the reply sent back from a webhook endpoint
+       properties:
+         status:
+@@ -6484,7 +6484,7 @@ components:
+         actor:
+           type:
+             - object
+-            - "null"
++            - null
+           description: The user who performed the action.
+           properties:
+             type:
+@@ -6515,7 +6515,7 @@ components:
+             details:
+               type:
+                 - object
+-                - "null"
++                - null
+               description: Metadata of the action. Each action type supports its own metadata
+                 attributes.
+               additionalProperties: true
+@@ -6554,7 +6554,7 @@ components:
+             client_name:
+               type:
+                 - string
+-                - "null"
++                - null
+               description: The third-party application that triggered the event, if
+                 applicable.
+             ip_address:
+@@ -6570,7 +6570,7 @@ components:
+             team_id:
+               type:
+                 - string
+-                - "null"
++                - null
+               description: The id of the team where the event took place -- if this took place
+                 in a specific team.
+           required:
+@@ -7548,7 +7548,7 @@ components:
+             type: object
+             properties:
+               err:
+-                type: "null"
++                type: null
+                 description: For successful requests, this value is always `null`.
+               images:
+                 type: object
+@@ -7556,7 +7556,7 @@ components:
+                 additionalProperties:
+                   type:
+                     - string
+-                    - "null"
++                    - null
+                   description: A URL to the requested image.
+                   format: uri
+             required:
+@@ -8285,12 +8285,12 @@ components:
+                     file_key:
+                       type:
+                         - string
+-                        - "null"
++                        - null
+                       description: The file key.
+                     node_id:
+                       type:
+                         - string
+-                        - "null"
++                        - null
+                       description: The node id.
+                     error:
+                       type: string

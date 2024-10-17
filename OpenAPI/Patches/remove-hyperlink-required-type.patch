@@ -1,0 +1,13 @@
+diff --git a/OpenAPI/openapi.yaml b/OpenAPI/openapi.yaml
+index 7c6315b..8265feb 100644
+--- a/OpenAPI/openapi.yaml
++++ b/OpenAPI/openapi.yaml
+@@ -4502,8 +4502,6 @@ components:
+         nodeID:
+           type: string
+           description: The ID of the node that the hyperlink points to, if `type` is `NODE`.
+-      required:
+-        - type
+     TypeStyle:
+       type: object
+       description: Metadata for character formatting.

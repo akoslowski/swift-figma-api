@@ -1,0 +1,13 @@
+diff --git a/OpenAPI/openapi.yaml b/OpenAPI/openapi.yaml
+index 63cb432..7c6315b 100644
+--- a/OpenAPI/openapi.yaml
++++ b/OpenAPI/openapi.yaml
+@@ -4403,7 +4403,7 @@ components:
+         - EASE_IN_BACK
+         - EASE_OUT_BACK
+         - EASE_IN_AND_OUT_BACK
+-        - CUSTOM_CUBIC_BEZIER
++        - CUSTOM_BEZIER
+         - GENTLE
+         - QUICK
+         - BOUNCY
